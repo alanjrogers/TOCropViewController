@@ -41,7 +41,7 @@
 @property (nonnull, nonatomic, strong, readonly) UIButton *rotateCounterclockwiseButton;
 @property (nonnull, nonatomic, strong, readonly) UIButton *resetButton;
 @property (nonnull, nonatomic, strong, readonly) UIButton *clampButton;
-@property (nonnull, nonatomic, strong, readonly) UIButton *rotateClockwiseButton;
+@property (null_resettable, nonatomic, strong, readonly) UIButton *rotateClockwiseButton;
 
 @property (nonnull, nonatomic, readonly) UIButton *rotateButton; // Points to `rotateCounterClockwiseButton`
 
