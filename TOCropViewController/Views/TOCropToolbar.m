@@ -203,7 +203,7 @@
             width = CGRectGetMinX(self.cancelTextButton.frame) - CGRectGetMaxX(self.doneTextButton.frame);
         }
         
-        CGRect containerRect = (CGRect){x,frame.origin.y,width,44.0f};
+        CGRect containerRect = (CGRect){{x,frame.origin.y},{width,44.0f}};
 
 #if TOCROPTOOLBAR_DEBUG_SHOWING_BUTTONS_CONTAINER_RECT
         containerView.frame = containerRect;
@@ -241,7 +241,7 @@
         frame.size.height = 44.0f;
         self.doneIconButton.frame = frame;
         
-        CGRect containerRect = (CGRect){0,CGRectGetMaxY(self.doneIconButton.frame),44.0f,CGRectGetMinY(self.cancelIconButton.frame)-CGRectGetMaxY(self.doneIconButton.frame)};
+        CGRect containerRect = (CGRect){{0,CGRectGetMaxY(self.doneIconButton.frame)},{44.0f,CGRectGetMinY(self.cancelIconButton.frame)-CGRectGetMaxY(self.doneIconButton.frame)}};
         
 #if TOCROPTOOLBAR_DEBUG_SHOWING_BUTTONS_CONTAINER_RECT
         containerView.frame = containerRect;

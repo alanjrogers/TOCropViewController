@@ -308,6 +308,8 @@
 //TODO: Deprecate iOS 7 properly at the right time
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     self.toolbarSnapshotView = [self.toolbar snapshotViewAfterScreenUpdates:NO];
@@ -476,6 +478,7 @@
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     [self setAspectRatioPreset:(TOCropViewControllerAspectRatioPreset)buttonIndex animated:YES];
@@ -715,7 +718,7 @@
         
         NSMutableArray *activityItems = [@[imageItem, attributes] mutableCopy];
         if (self.activityItems)
-            [activityItems addObjectsFromArray:self.activityItems];
+            [activityItems addObjectsFromArray:(NSArray * _Nonnull)self.activityItems];
         
         UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:self.applicationActivities];
         activityController.excludedActivityTypes = self.excludedActivityTypes;

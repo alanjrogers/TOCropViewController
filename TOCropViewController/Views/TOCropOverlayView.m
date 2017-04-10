@@ -96,10 +96,10 @@ static const CGFloat kTOCropOverLayerCornerWidth = 20.0f;
         
         CGRect frame = CGRectZero;
         switch (i) {
-            case 0: frame = (CGRect){0,-1.0f,boundsSize.width+2.0f, 1.0f}; break; //top
-            case 1: frame = (CGRect){boundsSize.width,0.0f,1.0f,boundsSize.height}; break; //right
-            case 2: frame = (CGRect){-1.0f,boundsSize.height,boundsSize.width+2.0f,1.0f}; break; //bottom
-            case 3: frame = (CGRect){-1.0f,0,1.0f,boundsSize.height+1.0f}; break; //left
+            case 0: frame = (CGRect){{0,-1.0f},{boundsSize.width+2.0f, 1.0f}}; break; //top
+            case 1: frame = (CGRect){{boundsSize.width,0.0f},{1.0f,boundsSize.height}}; break; //right
+            case 2: frame = (CGRect){{-1.0f,boundsSize.height},{boundsSize.width+2.0f,1.0f}}; break; //bottom
+            case 3: frame = (CGRect){{-1.0f,0},{1.0f,boundsSize.height+1.0f}}; break; //left
         }
         
         lineView.frame = frame;
@@ -113,20 +113,20 @@ static const CGFloat kTOCropOverLayerCornerWidth = 20.0f;
         CGRect verticalFrame = CGRectZero, horizontalFrame = CGRectZero;
         switch (i) {
             case 0: //top left
-                verticalFrame = (CGRect){-3.0f,-3.0f,3.0f,kTOCropOverLayerCornerWidth+3.0f};
-                horizontalFrame = (CGRect){0,-3.0f,kTOCropOverLayerCornerWidth,3.0f};
+                verticalFrame = (CGRect){{-3.0f,-3.0f},{3.0f,kTOCropOverLayerCornerWidth+3.0f}};
+                horizontalFrame = (CGRect){{0,-3.0f},{kTOCropOverLayerCornerWidth,3.0f}};
                 break;
             case 1: //top right
-                verticalFrame = (CGRect){boundsSize.width,-3.0f,3.0f,kTOCropOverLayerCornerWidth+3.0f};
-                horizontalFrame = (CGRect){boundsSize.width-kTOCropOverLayerCornerWidth,-3.0f,kTOCropOverLayerCornerWidth,3.0f};
+                verticalFrame = (CGRect){{boundsSize.width,-3.0f},{3.0f,kTOCropOverLayerCornerWidth+3.0f}};
+                horizontalFrame = (CGRect){{boundsSize.width-kTOCropOverLayerCornerWidth,-3.0f},{kTOCropOverLayerCornerWidth,3.0f}};
                 break;
             case 2: //bottom right
-                verticalFrame = (CGRect){boundsSize.width,boundsSize.height-kTOCropOverLayerCornerWidth,3.0f,kTOCropOverLayerCornerWidth+3.0f};
-                horizontalFrame = (CGRect){boundsSize.width-kTOCropOverLayerCornerWidth,boundsSize.height,kTOCropOverLayerCornerWidth,3.0f};
+                verticalFrame = (CGRect){{boundsSize.width,boundsSize.height-kTOCropOverLayerCornerWidth},{3.0f,kTOCropOverLayerCornerWidth+3.0f}};
+                horizontalFrame = (CGRect){{boundsSize.width-kTOCropOverLayerCornerWidth,boundsSize.height},{kTOCropOverLayerCornerWidth,3.0f}};
                 break;
             case 3: //bottom left
-                verticalFrame = (CGRect){-3.0f,boundsSize.height-kTOCropOverLayerCornerWidth,3.0f,kTOCropOverLayerCornerWidth};
-                horizontalFrame = (CGRect){-3.0f,boundsSize.height,kTOCropOverLayerCornerWidth+3.0f,3.0f};
+                verticalFrame = (CGRect){{-3.0f,boundsSize.height-kTOCropOverLayerCornerWidth},{3.0f,kTOCropOverLayerCornerWidth}};
+                horizontalFrame = (CGRect){{-3.0f,boundsSize.height},{kTOCropOverLayerCornerWidth+3.0f,3.0f}};
                 break;
         }
         
