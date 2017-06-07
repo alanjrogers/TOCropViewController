@@ -170,7 +170,7 @@
         CGRect frame = CGRectZero;
         frame.origin.y = self.statusBarVisible ? 20.0f : 0.0f;
         frame.size.height = 44.0f;
-        frame.size.width = [self.cancelTextButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.cancelTextButton.titleLabel.font}].width + 10;
+        frame.size.width = [self.cancelTextButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:(UIFont *_Nonnull)self.cancelTextButton.titleLabel.font}].width + 10;
 
         //If normal layout, place on the left side, else place on the right
         if (self.reverseContentLayout == NO) {
@@ -182,7 +182,7 @@
         self.cancelTextButton.frame = frame;
         
         // Work out the Done button frame
-        frame.size.width = [self.doneTextButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.doneTextButton.titleLabel.font}].width + 10;
+        frame.size.width = [self.doneTextButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:(UIFont *_Nonnull)self.doneTextButton.titleLabel.font}].width + 10;
         
         if (self.reverseContentLayout == NO) {
             frame.origin.x = boundsSize.width - (frame.size.width + insetPadding);
